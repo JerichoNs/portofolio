@@ -1,0 +1,51 @@
+.gallery {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e, #0a0a0a);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photoCard {
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photoCard:hover {
+  transform: scale(1.05);
+}
+
+.photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.photoCard:hover .photo {
+  filter: brightness(1.1) contrast(1.1);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}

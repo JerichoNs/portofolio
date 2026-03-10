@@ -1,0 +1,2 @@
+node_modules
+.nextgit reset --soft HEAD~1

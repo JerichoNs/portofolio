@@ -1,0 +1,51 @@
+.section { padding: 30px 16px; }
+.inner { width: min(1100px, 100%); margin: 0 auto; }
+
+.head { margin-bottom: 14px; }
+.kicker { font-size: 12px; letter-spacing: 2px; color: rgba(255,255,255,0.72); }
+.title { margin-top: 10px; font-size: clamp(24px, 2.6vw, 34px); }
+.desc { margin-top: 8px; color: var(--muted); max-width: 70ch; line-height: 1.7; }
+
+.grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card { padding: 16px; position: relative; overflow: hidden; }
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-80px;
+  background: radial-gradient(300px 240px at 20% 20%, rgba(255,61,242,0.18), transparent 60%);
+  opacity: 0.7;
+  pointer-events:none;
+}
+
+.badge {
+  width: fit-content;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,245,255,0.22);
+  background: rgba(0,245,255,0.06);
+  position: relative;
+}
+
+.badgeGlow {
+  position:absolute;
+  inset:-10px;
+  border-radius: 16px;
+  background: radial-gradient(circle, rgba(0,245,255,0.20), transparent 70%);
+  filter: blur(10px);
+  pointer-events:none;
+}
+
+.cardTitle { margin-top: 12px; font-size: 18px; }
+.cardDesc { margin-top: 8px; color: var(--muted); line-height: 1.7; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
